@@ -64,3 +64,4 @@ phases:
 artifacts:
  files:
    - '**/*'
+   - 'target/Pipeline.zip'
