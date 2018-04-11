@@ -63,5 +63,5 @@ phases:
      # - ./vendor/bin/phpunit
 artifacts:
  files:
-   - '**/*'
-   - 'target/Pipeline.zip'
+   #- '**/*'
+   - pipeline.zip
