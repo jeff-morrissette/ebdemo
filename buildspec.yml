@@ -56,6 +56,8 @@ phases:
    commands:
      - echo Build completed on `date`
      - echo $CODEBUILD_SRC_DIR
+     - mvn package
+     - mv target/EBDemo.zip EBDemo.zip
      # Do you need to do this? In many cases phpunit will use sqllite or similar to avoid the need for a real DB.
      # If you don't need it delete it
      # - /usr/bin/mysql  -u root -e "GRANT ALL ON *.* TO 'test'@'localhost' IDENTIFIED BY '' WITH GRANT OPTION"
@@ -63,6 +65,7 @@ phases:
      # - ./vendor/bin/phpunit
 artifacts:
  files:
-   - '**/*'
-   #- laraveldemo-env.zip
+   - EBDemo.zip
+   - .ebextensions/**/*
+   
  discard-paths: yes
