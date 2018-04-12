@@ -41,7 +41,7 @@ phases:
          #Various handy node based dev tools - do you need these during your build? Comment if not.
          #npm install -g gulp
          #npm install -g grunt
-         #npm install -g webpack
+         npm install -g webpack
 
      # Start Mysql if you need it
      # - apt-get install -y mysql-server
@@ -51,7 +51,6 @@ phases:
      - echo Build started on `date`
      - echo Installing composer deps
      - composer install --no-progress --no-suggest
-     - composer require erusev/parsedown
 
  post_build:
    commands:
@@ -63,5 +62,6 @@ phases:
      # - ./vendor/bin/phpunit
 artifacts:
  files:
-   - '**/*'
-   #- pipeline.zip
+   #- '**/*'
+   - laraveldemo-env.zip
+ discard-paths: yes
