@@ -64,6 +64,5 @@ phases:
      # - ./vendor/bin/phpunit
 artifacts:
  files:
-   - EBDemo.zip
-   - .ebextensions/**/*
- discard-paths: yes
+   - '**/*'
+ base-directory: 'target/EBDemo'
