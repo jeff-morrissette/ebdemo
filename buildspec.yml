@@ -46,6 +46,11 @@ phases:
      # Start Mysql if you need it
      # - apt-get install -y mysql-server
      # - su mysql -s /bin/bash -c "/usr/sbin/mysqld" &
+ pre_build:
+   commands:
+     - echo Pre_Build started on `date`
+     - printenv > .env
+
  build:
    commands:
      - echo Build started on `date`
