@@ -7,7 +7,7 @@ env:
    APP_DEBUG: "true"
    LOG_CHANNEL: "stack"
  parameter-store:
-   APP_KEY: "APP_KEY"
+   APP_KEY: "/CodeBuild/APP_KEY"
 
 phases:
  install:
